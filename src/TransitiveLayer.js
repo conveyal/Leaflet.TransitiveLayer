@@ -19,6 +19,16 @@ L.TransitiveLayer = L.Class.extend({
     this._transitive.options.autoResize = false;
     this._transitive.setElement(this._container);
     this._transitive.render();
+
+    var self = this;
+    this._transitive.on('clear data', function() {
+      self._refresh();
+    });
+
+    this._transitive.on('update data', function() {
+      self._transitive.render();
+      self._refresh();
+    });
   },
 
   onRemove: function(map) {
