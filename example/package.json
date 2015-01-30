@@ -1,0 +1,9 @@
+{
+  "name": "leaflet-transitivelayer-example",
+  "description": "An example of Leaflet.TransitiveLayer",
+  "author": "Conveyal",
+  "homepage": "http://conveyal.com/",
+  "devDependencies": {
+    "component": "^0.19.9"
+  }
+}
