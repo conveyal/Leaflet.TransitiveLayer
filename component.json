@@ -1,0 +1,11 @@
+{
+  "name": "Leaflet.TransitiveLayer",
+  "version": "0.0.1",
+  "description": "Render Transitive.js on a Leaflet map",
+  "keywords": [ "map", "transit", "schematic" ],
+  "repository": "conveyal/Leaflet.TransitiveLayer",
+  "main": "TransitiveLayer.js",
+  "scripts": [
+    "TransitiveLayer.js"
+  ]
+}
