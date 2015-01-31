@@ -14,7 +14,6 @@ L.TransitiveLayer = L.Class.extend({
     map.on("drag", this._refresh, this);
     map.on("resize", this._resize, this);
 
-
     this._transitive.options.zoomEnabled = false;
     this._transitive.options.autoResize = false;
     this._transitive.setElement(this._container);
@@ -42,15 +41,18 @@ L.TransitiveLayer = L.Class.extend({
   _initContainer: function() {
     this._container = L.DomUtil.create('div', 'leaflet-transitive-container', this._map.getPanes().overlayPane);
     this._container.style.position = 'absolute';
-    this._container.style.width = this._map.getSize().x+"px";
-    this._container.style.height = this._map.getSize().y+"px";
+    this._container.style.width = this._map.getSize().x + "px";
+    this._container.style.height = this._map.getSize().y + "px";
   },
 
   _refresh: function() {
-    var bounds  = this._map.getBounds();
+    var bounds = this._map.getBounds();
     var topLeft = this._map.latLngToLayerPoint(bounds.getNorthWest());
     L.DomUtil.setPosition(this._container, topLeft);
-    this._transitive.setBounds([[bounds.getWest(), bounds.getSouth()],[bounds.getEast(), bounds.getNorth()]]);
+    this._transitive.setBounds([
+      [bounds.getWest(), bounds.getSouth()],
+      [bounds.getEast(), bounds.getNorth()]
+    ]);
   },
 
   _resize: function(data) {
@@ -60,6 +62,6 @@ L.TransitiveLayer = L.Class.extend({
 
 });
 
-L.transitiveLayer = function (transitive, options) {
+L.transitiveLayer = function(transitive, options) {
   return new L.TransitiveLayer(transitive, options);
 };
