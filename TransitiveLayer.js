@@ -1,4 +1,4 @@
-L.TransitiveLayer = L.Class.extend({
+L.TransitiveLayer = module.exports = L.Class.extend({
 
   initialize: function(transitive, options) {
     this._transitive = transitive;
