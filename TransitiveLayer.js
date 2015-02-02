@@ -38,6 +38,12 @@ L.TransitiveLayer = module.exports = L.Class.extend({
     map.off("resize", this._resize, this);
   },
 
+  getBounds: function() {
+    var bounds = this._transitive.getNetworkBounds();
+    if(!bounds) return null;
+    return new L.LatLngBounds([bounds[0][1], bounds[0][0]],[bounds[1][1], bounds[1][0]]);
+  },
+
   _initContainer: function() {
     this._container = L.DomUtil.create('div', 'leaflet-transitive-container', this._map.getPanes().overlayPane);
     this._container.style.position = 'absolute';
