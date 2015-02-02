@@ -49,7 +49,7 @@ L.TransitiveLayer = module.exports = L.Class.extend({
     var bounds = this._map.getBounds();
     var topLeft = this._map.latLngToLayerPoint(bounds.getNorthWest());
     L.DomUtil.setPosition(this._container, topLeft);
-    this._transitive.setBounds([
+    this._transitive.setDisplayBounds([
       [bounds.getWest(), bounds.getSouth()],
       [bounds.getEast(), bounds.getNorth()]
     ]);
