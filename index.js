@@ -1,4 +1,5 @@
 var Transitive = require('transitive');
+L.TransitiveLayer = require('Leaflet.TransitiveLayer');
 
 // set some Leaflet map configuration properties
 var config = {
@@ -24,7 +25,8 @@ var transitive = new Transitive({
 });
 
 // create and add the Transitive layer to the map
-map.addLayer(new L.TransitiveLayer(transitive));
+var transitiveLayer = new L.TransitiveLayer(transitive);
+map.addLayer(transitiveLayer);
 
 // set the initial map view
 map.setView(config.initLatLng, config.initZoom);
@@ -36,4 +38,5 @@ document.getElementById("clear").onclick = function(event) {
 
 document.getElementById("load").onclick = function(event) {
   transitive.updateData(DATA);
+  map.fitBounds(transitiveLayer.getBounds());
 };
