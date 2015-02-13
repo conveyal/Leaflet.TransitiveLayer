@@ -25,17 +25,9 @@ map.addLayer(new L.TransitiveLayer(transitive));
 ```
 
 
-## Running the Example
+## Demo
 
-An example is provided with a sample Transitive data set.
-
-In the example/ directory:
-```
-npm install
-make
-```
-  
-The first line installs [Component](https://github.com/componentjs/component); the second uses Component to download the Transitive.js dependency and build the example. Then open index.html in a web browser.
+[Online demo here](http://conveyal.github.io/Leaflet.TransitiveLayer). The source is located in the [gh-pages](https://github.com/conveyal/Leaflet.TransitiveLayer/tree/gh-pages) branch.
 
 
 
