@@ -23,11 +23,3 @@ var transitive = new Transitive({
 // create and add the Transitive layer to the map
 map.addLayer(new L.TransitiveLayer(transitive));
 ```
-
-
-## Demo
-
-[Online demo here](http://conveyal.github.io/Leaflet.TransitiveLayer). The source is located in the [gh-pages](https://github.com/conveyal/Leaflet.TransitiveLayer/tree/gh-pages) branch.
-
-
-

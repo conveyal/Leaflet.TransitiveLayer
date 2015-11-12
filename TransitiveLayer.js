@@ -1,3 +1,5 @@
+var L = require('leaflet')
+
 L.TransitiveLayer = module.exports = L.Class.extend({
 
   initialize: function(transitive, options) {

@@ -1,0 +1,15 @@
+{
+  "name": "leaflet-transitivelayer",
+  "version": "0.0.2",
+  "description": "Leaflet.TransitiveLayer",
+  "author": "Conveyal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/conveyal/Leaflet.TransitiveLayer.git"
+  },
+  "main": "TransitiveLayer.js",
+  "dependencies": {
+    "leaflet": "^0.7.3"
+  }
+}
