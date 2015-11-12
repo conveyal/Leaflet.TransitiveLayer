@@ -3,6 +3,8 @@
 
 A [Leaflet](http://leafletjs.com/) plugin for overlaying a [Transitive.js](https://github.com/conveyal/transitive.js) map on a Leaflet map.
 
+NOTE: Version 0.1.0 no longer supports component. To use with component, specify version 0.0.2
+
 ## Basic Usage
 
 ```
