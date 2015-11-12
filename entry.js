@@ -1,5 +1,6 @@
-var Transitive = require('transitive');
-L.TransitiveLayer = require('Leaflet.TransitiveLayer');
+var L = require('leaflet')
+var Transitive = require('transitive-js')
+L.TransitiveLayer = require('leaflet-transitivelayer')
 
 // set some Leaflet map configuration properties
 var config = {
@@ -12,7 +13,7 @@ var config = {
 var map = L.map('map', {
   inertia: false,
   zoomAnimation: false
-});
+})
 
 // add the base TileLayer
 map.addLayer(new L.TileLayer(config.tileUrl));

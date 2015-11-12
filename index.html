@@ -4,9 +4,10 @@
 
   <title>Leaflet TransitiveLayer Example</title>
 
-  <!-- include Leaflet -->
+  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="style.css">
+
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <link rel="stylesheet" href="build/build.css">
 
 </head>
 <body>
@@ -16,16 +17,11 @@
     <span id="load" class="control-link">Load</span>
   </div>
 
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script></head>
-
   <!-- include the sample Transitive data -->
   <script src="sample_data.js"></script>
 
-  <!-- include example component build -->
-  <script src="build/build.js"></script>
+  <!-- include webpack build -->
+  <script src="bundle.js"></script>
 
-  <script>
-    require('leaflet-transitivelayer-example');
-  </script>
 </body>
 </html>
