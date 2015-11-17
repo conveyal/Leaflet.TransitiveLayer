@@ -1,6 +1,6 @@
-var L = require('leaflet')
+window.L = window.L || require('leaflet')
 
-L.TransitiveLayer = module.exports = L.Class.extend({
+window.L.TransitiveLayer = module.exports = window.L.Class.extend({
 
   initialize: function(transitive, options) {
     this._transitive = transitive;
@@ -70,6 +70,6 @@ L.TransitiveLayer = module.exports = L.Class.extend({
 
 });
 
-L.transitiveLayer = function(transitive, options) {
-  return new L.TransitiveLayer(transitive, options);
+window.L.transitiveLayer = function(transitive, options) {
+  return new window.L.TransitiveLayer(transitive, options);
 };
