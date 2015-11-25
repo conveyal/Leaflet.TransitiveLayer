@@ -9,7 +9,7 @@
     "url": "git://github.com/conveyal/Leaflet.TransitiveLayer.git"
   },
   "main": "TransitiveLayer.js",
-  "dependencies": {
-    "leaflet": "^0.7.3"
+  "peerDependencies": {
+    "leaflet": "^0.7.7"
   }
 }
