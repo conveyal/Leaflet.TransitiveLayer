@@ -66,6 +66,11 @@ L.TransitiveLayer = module.exports = L.Class.extend({
   _resize: function (data) {
     this._transitive.resize(data.newSize.x, data.newSize.y)
     this._refresh()
+  },
+
+  // needed for compatibility w/ Leaflet 1.0
+  _layerAdd: function (data) {
+    this.onAdd(data.target)
   }
 
 })
